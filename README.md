@@ -367,3 +367,239 @@ This will open the Virtual Machines dashboard where you can view and manage the 
 
 ---
 
+# Step 23 – Confirm the Virtual Machine is Running
+
+Return to the **Virtual Machines** dashboard in the Azure portal.
+
+Locate the virtual machine you created and confirm that the **Status** shows **Running**.  
+You will also see the **Public IP Address** assigned to the virtual machine. This IP address will be used to connect to the machine remotely.
+
+![Virtual Machine Running](images/22-resource-groups-search.png)
+
+---
+
+# Step 24 – Open Spotlight Search (Mac Users)
+
+If you are using **macOS**, open **Spotlight Search** by pressing:
+
+Command (⌘) + Space
+
+Then search for **App Store** and open it.
+
+![Open App Store](images/23-resource-groups-search.png)
+
+> **Note:**  
+> Windows users can simply open the **Start Menu** and search for **Remote Desktop**. The Remote Desktop client is already installed on Windows systems.
+
+---
+
+# Step 25 – Search for the Windows App
+
+Inside the **App Store**, search for:
+
+Windows App
+
+This application (formerly **Microsoft Remote Desktop**) allows macOS users to remotely connect to Windows systems such as the Azure virtual machine created earlier.
+
+Install or open the application.
+
+![Install Windows App](images/24-resource-groups-search.png)
+
+---
+
+# Step 26 – Launch the Windows App
+
+After installing the application, open **Spotlight Search** again.
+
+Search for:
+
+Windows App
+
+Then launch the application.
+
+![Open Windows App](images/25-resource-groups-search.png)
+
+---
+
+# Step 27 – Add the Virtual Machine
+
+Inside the **Windows App**, click the **+** icon located in the top-right corner.
+
+From the dropdown menu select:
+
+Add PC
+
+This option allows you to create a new remote connection.
+
+![Add PC](images/26-resource-groups-search.png)
+
+---
+
+# Step 28 – Enter the Virtual Machine Public IP Address
+
+A configuration window will appear.
+
+In the **PC name** field, enter the **Public IP Address** of your Azure virtual machine.
+
+You can find this IP address from the **Virtual Machines dashboard** shown in Step 23.
+
+Leave the remaining settings as default and click **Add**.
+
+![Enter VM IP Address](images/27-resource-groups-search.png)
+
+---
+
+# Step 29 – Locate the Virtual Machine Public IP Address
+
+Return to the **Virtual Machines** page in the Azure Portal.
+
+Find the virtual machine you created (`osTicket-Proj`) and locate the **Public IP Address** in the table.
+
+Copy this IP address because you will use it to remotely connect to the VM.
+
+![Virtual Machine Public IP](images/28-resource-groups-search.png)
+
+---
+
+# Step 30 – Add the Azure VM to Windows App
+
+Open the **Windows App** (Microsoft Remote Desktop) on your computer.
+
+Click **Add PC** and configure the connection:
+
+• **PC name:** Paste the Public IP Address from Azure  
+• **Friendly name:** osTicket  
+
+Leave the remaining settings as default.
+
+Click **Add**.
+
+![Add PC Configuration](images/29-resource-groups-search.png)
+
+---
+
+# Step 31 – Confirm the Remote Connection Was Added
+
+After adding the PC, it will appear inside the **Saved Devices** section.
+
+You can now click the connection the VM labeled **osTicket**.
+
+Click the connection to start the remote desktop session.
+
+![Saved Device](images/30-resource-groups-search.png)
+
+---
+
+# Step 32 – Enter Your Virtual Machine Credentials
+
+A login window will appear.
+
+Enter the **username and password** that you created earlier when configuring the Azure virtual machine.
+
+Then click **Continue**.
+
+![Enter Credentials](images/31-resource-groups-search.png)
+
+---
+
+# Step 33 – Accept the Certificate Warning
+
+When connecting for the first time, you may see a certificate verification warning.
+
+Click **Continue** to proceed with the connection.
+
+This message appears because the VM is using a self-signed certificate.
+
+![Certificate Warning](images/32-resource-groups-search.png)
+
+---
+
+# Step 34 – Successfully Connect to the Virtual Machine
+
+After logging in, the Windows virtual machine will begin loading.
+
+You will see the **Windows login screen** for the VM user account.
+
+This confirms that the remote desktop connection to your Azure VM was successful.
+
+![Windows VM Login](images/33-resource-groups-search.png)
+
+---
+
+# Step 35 – Configure Windows Privacy Settings
+
+After logging into the virtual machine for the first time, Windows will ask you to configure privacy settings.
+
+Review the options on the screen and click **Next** to continue.
+
+![Windows Privacy Settings](images/34-resource-groups-search.png)
+
+---
+
+# Step 36 – Accept the Privacy Settings
+
+Scroll through the remaining privacy options.
+
+Once finished, click **Accept** to complete the configuration.
+
+![Accept Privacy Settings](images/35-resource-groups-search.png)
+
+---
+
+# Step 37 – Access the Windows Desktop
+
+After accepting the privacy settings, the Windows desktop will load.
+
+You are now successfully logged into your **Azure Virtual Machine**.
+
+At this point you should see the Windows desktop with default applications such as **Microsoft Edge** and **Recycle Bin**.
+
+![Windows Desktop](images/36-resource-groups-search.png)
+
+---
+
+# Step 38 – Stop the Virtual Machine When Finished
+
+To avoid unnecessary Azure charges, return to the **Azure Portal** when you are finished using the VM.
+
+Navigate to:
+
+Virtual Machines → Select **osTicket-Proj**
+
+Click the **Stop** option from the toolbar.
+
+This will deallocate the VM and stop billing for compute resources.
+
+![Stop Virtual Machine](images/37-resource-groups-search.png)
+
+---
+
+# Step 39 – Verify the Virtual Machine Has Stopped
+
+After stopping the VM, click **Refresh** on the Virtual Machines page.
+
+Confirm that the **Status** now shows:
+
+Stopped (deallocated)
+
+This confirms that the VM is no longer running and billing has stopped.
+
+![VM Stopped](images/38-resource-groups-search.png)
+
+---
+
+# Final Summary
+
+In this lab you successfully:
+
+• Created a Microsoft Azure account  
+• Created a Resource Group  
+• Deployed a Windows 11 Virtual Machine  
+• Connected to the VM using Remote Desktop  
+• Logged into the Windows environment  
+• Properly stopped the VM to prevent unnecessary charges  
+
+The Azure virtual machine environment is now ready for the next stage of the project: **Installing and configuring osTicket.**
+
+
+
